@@ -1,0 +1,211 @@
+/* 1. Subimos la altura general para darles más espacio a los deportistas */
+.container-inicio {
+  width: 100%;
+  height: 65vh; /* Aumentado de 55vh a 65vh para que respire el plano */
+  overflow: hidden;
+  position: relative;
+  background-color: #ededed;
+  padding-bottom: 35px; 
+   border-bottom: 2px solid #000000;
+}
+
+/* 2. Modificamos el object-position para enfocar las caras */
+.inicio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* CAMBIO CLAVE: Cambiamos a 'center 15%'. 
+     Esto le ordena al navegador enfocar casi al ras de la parte superior 
+     de la foto, evitando que se corten los rostros. */
+  object-position: center 15%; 
+  display: block;
+}
+
+/* 3. Ajuste responsivo para pantallas móviles */
+@media (max-width: 768px) {
+  .container-inicio {
+    height: 45vh; /* Un poco más de altura en celulares también */
+    /* En pantallas chicas centramos verticalmente porque la foto es muy ancha */
+    .inicio-img {
+      object-position: center center; 
+    }
+  }
+}
+
+/* 全体のコンテナ */
+.categorias-section {
+  padding: 40px 4%;
+  background-color: #ffffff; /* 画像のように背景を白にする場合（黒背景なら #0b0b0b に変更してください） */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* タイトル "Categorías" のスタイル */
+.categorias-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* 4つのアイテムを横一列に並べる外枠 */
+.categories-grid {
+  display: flex;
+  gap: 16px; /* 画像同士のすき間 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 各カテゴリの箱（縦並びにして中央揃え） */
+.category-item {
+  flex: 1; /* 4つの要素をまったく同じ横幅に均等配分 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* テキストを画像の中央に */
+}
+
+/* 画像のスタイル設定 */
+.category-item img {
+  width: 100%;
+  height: 180px; /* 画像の高さを統一して綺麗に揃える */
+  object-fit: cover; /* 縦横比を崩さずに枠いっぱいに表示 */
+  border: 1px solid #000000; /* 画像のまわりの黒い細枠 */
+  
+  /* Osakaの雰囲気を出すための白黒（モノクロ）フィルター（不要なら削除してください） */
+  filter: grayscale(100%); 
+  transition: filter 0.3s ease;
+}
+
+/* マウスを乗せたときに色が戻るエフェクト（お好みで） */
+.category-item img:hover {
+  filter: grayscale(0%);
+}
+
+/* 画像の下のテキスト（フォント・サイズ） */
+.category-item p {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111111;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .categories-grid {
+    flex-wrap: wrap; 
+  }
+  .category-item {
+    flex: calc(50% - 12px); 
+    margin-bottom: 16px;
+  }
+}
+
+
+
+/* Contenedor principal de la sección */
+.elite-section {
+    background-color: #0b0b0b; /* Negro mate Osaka */
+    color: #ffffff;
+    padding: 80px 4%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque de texto superior */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Subtítulo pequeño inicial */
+.elite-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #505050; /* Gris técnico apagado */
+    margin-bottom: 12px;
+}
+
+/* Título principal */
+.elite-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px 0;
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Párrafo descriptivo */
+.elite-description {
+    font-size: 1.05rem;
+    color: #959595; /* Gris claro de alta legibilidad */
+    line-height: 1.6;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 0 50px 0;
+}
+
+/* Grilla horizontal de los atletas */
+.athletes-grid {
+    display: flex;
+    gap: 20px; /* Separación limpia entre tarjetas */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo contenedor en computadoras */
+    box-sizing: border-box;
+}
+
+/* Tarjeta individual de jugador */
+.athlete-card {
+    flex: 1; /* Distribuye el espacio equitativamente en 4 columnas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para las imágenes de los atletas */
+.athlete-card img {
+    width: 100%;
+    height: 300px; /* Altura fija para que todas las fotos queden perfectamente alineadas */
+    object-fit: cover; /* Mantiene la proporción sin deformar la imagen */
+    border: 1px solid #1f1f1f; /* Marco sutil técnico */
+    border-radius: 4px;
+    filter: grayscale(100%); /* Efecto artístico blanco y negro inicial */
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover: Recupera color y se eleva sutilmente */
+.athlete-card:hover img {
+    filter: grayscale(0%);
+    border-color: #ffffff;
+}
+
+/* Nombres de los jugadores abajo de cada foto */
+.athlete-card h3 {
+    margin-top: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Adaptabilidad responsiva para dispositivos móviles */
+@media (max-width: 850px) {
+    .elite-title {
+        font-size: 1.7rem;
+    }
+    
+    .athletes-grid {
+        flex-wrap: wrap; /* Permite romper la fila única en pantallas chicas */
+    }
+    
+    .athlete-card {
+        flex: calc(50% - 10px); /* Pasa a formato de 2 columnas por fila en celulares */
+        margin-bottom: 20px;
+    }
+    
+    .athlete-card img {
+        height: 220px; /* Achica la altura de las fotos en entornos móviles */
+    }
+}

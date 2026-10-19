@@ -1,0 +1,97 @@
+/* Contenedor de fondo centrado */
+.contacto-compacto {
+  background-color: #ffffff; 
+  color: #e6dfdf;
+  padding: 60px 4%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Caja del formulario */
+.form-container {
+  background-color: #000000; /* Gris técnico oscuro */
+  border: 1px solid #1f1f1f;
+  padding: 35px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 450px; /* Ancho ajustado y estético */
+  box-sizing: border-box;
+}
+
+/* Título superior */
+.form-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #ffffff;
+  margin: 0 0 25px 0;
+  text-align: center;
+  border-bottom: 1px solid #1f1f1f;
+  padding-bottom: 12px;
+}
+
+.mini-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a0a0a0;
+}
+
+/* Inputs y Textarea técnicos */
+.form-group input,
+.form-group textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.25s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffffff; /* Brilla a blanco al hacer click */
+}
+
+/* Botón de envío limpio */
+.btn-enviar {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.25s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #e6e6e6;
+  transform: translateY(-2px);
+}

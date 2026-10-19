@@ -1,0 +1,135 @@
+.nosotros-section {
+    background-color: #ffffff; /* Fondo blanco limpio */
+    color: #000000; /* Texto negro para contraste absoluto */
+    padding: 80px 6%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* Caja de contenido centralizado */
+.nosotros-content {
+    max-width: 800px;
+    /* Ancho de lectura óptimo */
+    width: 100%;
+}
+
+/* Título de la página: "Nosotros" */
+.section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    /* Espaciado premium */
+    color: #000000;
+    /* Gris sutil */
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Subtítulo destacado principal */
+.main-subtitle {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-bottom: 60px;
+    text-align: left;
+    border-left: 3px solid #ffffff;
+    /* Línea de diseño lateral */
+    padding-left: 20px;
+}
+
+/* Bloques individuales de subtítulos y párrafos */
+.text-block {
+    margin-bottom: 45px;
+}
+
+/* Títulos de las historias (H4) */
+.text-block h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+/* Párrafos informativos */
+.text-block p {
+    color: #a0a0a0;
+    /* Gris claro de alta legibilidad */
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Estilo para la lista de los 3 pilares japoneses */
+.pilares-list {
+    list-style: none;
+    /* Quitamos los círculos por defecto */
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pilares-list li {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Detalle visual antes de cada pilar (un guión técnico) */
+.pilares-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    /* O color flúor si usás acentos */
+    font-weight: bold;
+}
+
+/* Resaltado del concepto (Funcionalidad, Minimalismo...) */
+.pilares-list li span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Párrafo de cierre (Manifiesto de marca) */
+.manifesto-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #070707;
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    border-top: 1px solid #1a1a1a;
+    letter-spacing: 0.02em;
+}
+
+/* Ajustes adaptables para celulares */
+@media (max-width: 768px) {
+    .nosotros-section {
+        padding: 60px 6%;
+    }
+
+    .main-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .manifesto-text {
+        font-size: 1.1rem;
+        padding: 20px 10px;
+    }
+}

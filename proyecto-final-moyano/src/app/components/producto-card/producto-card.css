@@ -1,0 +1,76 @@
+.card-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+/* Tarjeta minimalista al estilo Osaka */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none; /* Las tiendas modernas casi no usan bordes grises duros */
+  background-color: transparent;
+  transition: transform 0.2s ease-in-out;
+  text-align: left; /* Alineación limpia a la izquierda */
+}
+
+.card:hover {
+  transform: translateY(-4px); /* Pequeño efecto dinámico al pasar el cursor */
+}
+
+/* Contenedor de la imagen con fondo gris idéntico a tus capturas */
+.card-img-container {
+  height: 240px;
+  background-color: #ededed; /* Fondo gris característico */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.card-img-top {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Mantiene la proporción del producto a la perfección */
+}
+
+/* Cuerpo de texto alineado */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 4px; /* Un poco de aire en los costados */
+}
+
+/* Título del producto */
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Corta a 2 líneas si es muy largo */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em; /* Mantiene la misma altura de bloque */
+}
+
+/* Precio destacado en la parte superior */
+.card-precio {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 8px;
+}
+
+/* Descripción secundaria o subtítulo */
+.card-text {
+  font-size: 0.85rem;
+  color: #666666;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Límite estricto de 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0;
+}

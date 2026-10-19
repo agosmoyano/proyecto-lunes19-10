@@ -1,0 +1,11 @@
+<div class="container mt-4"> 
+    <div class="row">
+         @for(producto of productos; track producto.titulo){
+            <div class="col-md">
+                <app-producto-card [producto]="producto">
+                   
+                </app-producto-card>
+            </div>
+         }
+    </div>
+</div>

@@ -1,0 +1,102 @@
+/* Contenedor principal a lo largo de la pantalla */
+.card {
+  background-color: #0b0b0b; /* Negro mate profundo */
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 100%; /* Todo el ancho de la pantalla */
+  padding: 35px 6%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row; /* Mantiene la distribución horizontal base */
+  flex-wrap: wrap; /* Permite que el h2 salte a su propia línea arriba */
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* MARCA PRINCIPAL: Se posiciona arriba de todo ocupando el 100% del ancho */
+.card h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 100%; /* Fuerza a ocupar toda la línea superior */
+  margin: 0 0 20px 0; /* Espacio abajo para separarlo del resto del contenido */
+  text-align: left; /* Alineado al inicio junto con el subtítulo */
+}
+
+/* Título secundario (Queda abajo del h2, alineado a la izquierda) */
+.card-header {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #505050; /* Gris sutil de marca */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de enlaces (Abajo del h2, alineado a la derecha) */
+.card-body {
+  display: flex;
+  flex-direction: row; /* Links uno al lado del otro */
+  gap: 35px; /* Separación limpia entre ellos */
+}
+
+/* Estilo minimalista para los enlaces */
+.card-body a {
+  color: #8c8c8c; /* Gris urbano de base */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* Efecto Hover: Cambia a blanco puro */
+.card-body a:hover {
+  color: #ffffff;
+}
+
+/* Línea sutil decorativa que aparece abajo del link al pasar el mouse */
+.card-body a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.card-body a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Adaptabilidad para pantallas de celulares */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Pasa a diseño vertical en pantallas chicas */
+    gap: 15px;
+    text-align: center;
+    padding: 35px 20px;
+  }
+  
+  .card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    flex-direction: column; /* Los enlaces también se apilan verticalmente */
+    gap: 16px;
+  }
+}
